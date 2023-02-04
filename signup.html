@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <script type="text/javascript"></script>
+  
+</head>
+<body>
+    <style>
+        body {
+         
+         background-image: url("https://wallpaperaccess.com/full/1635203.jpg");
+       
+     }
+     </style>
+    <!--navigation bar wit logo and anchor tag-->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img alt="Logo" src="Kerala_Tourism_Logo-700x520 (2).jpg" width="240" height="120"></a>
+    </div>
+      <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon d-flex justify-content-start align-items-center">
+          <i class="fas fa-bars"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="index.html"><b>Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="explore.html"><b>Explore</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="login.html"> <b>Login</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="signup.html"><b>Sign Up</b></a>
+          </li>
+        </ul>
+  
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link px-2" href="#!">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-2" href="#!">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ps-2" href="#!">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--nav ends-->
+   
+   
+   <section class="vh-150  gradient-custom mb-5">
+    <br>
+    <div class="container my-5" id="sign">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12 col-lg-9 col-xl-7">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+              <div class="card-body p-4 p-md-5 d-flex align-items-center">
+                <form action="signup.html" onsubmit=" return validate()">
+                    <div class="d-flex align-items-center py-3 mt-1">
+                        <h2>Sign Up Form</h2>
+                    </div>
+                    
+                    <label for="name">Name</label><br>
+                    <input type="text" placeholder="Name" id="name" class="form-control form-control-lg" onkeyup="validateName()">
+                    <label for="nameError" id="nameError"></label><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" placeholder="Email" id="email" class="form-control form-control-lg" onkeyup="validateEmail()">
+                    <label for="emailError" id="emailError"></label><br>
+                    <label for="phnno" class="">Phone Number</label><br>
+                    <input type="text" placeholder="Phone Number" id="phnno" class="form-control form-control-lg " onkeyup="validatePhnno()">
+                    <label for="phnError" id="phnError"></label><br>
+                            <label for="password">Password</label><br>
+                            <input type="password" placeholder="Password" id="pwd" class="form-control form-control-lg" onkeyup="validatePassword()">
+                            <label for="passwordError" id="pwdError"></label>
+                            <input type="text" id="strengthDisp"><br><br>
+                    <div class="text-center">
+                        <input class="btn btn-primary btn-lg" type="submit" value="Submit" id=submit/>
+                        <label for="submitError" id="submitError"></label>
+                        <label for="submitError" id="submitError"></label>
+                    </div>
+                </form>
+                <script src="app.js"></script>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>      
+   
+ <!-- footer-->
+ <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      
+     
+     <p>Department of Tourism, Government of Kerala, Park View, Thiruvananthapuram, Kerala, India - 695 033</p>
+     <p>Phone: +91 471 2321132, Fax: +91 471 2322279, E-mail: info@keralatourism.org.</p> 
+     <p>All rights reserved <small> KERALA_TSM 2022 &copy;Copyright</small> |Terms of Use | Cookie Policy | Contact Us.</p>
+     <p>Developed & Maintained by Dev Navaneeth.</p>
+    </div>
+  </footer>
+    <!-- Copyright -->
+</footer>
+      
+</body>
+</html>l
